@@ -22,20 +22,11 @@
 
 ## Product Demo
 
-<!-- 
-  HOW TO GET TRUE INLINE VIDEO PLAYBACK ON GITHUB:
-  1. Go to any GitHub Issue on this repo → click "New Issue"
-  2. Drag & drop media/fairlend-demo.mp4 into the text box
-  3. GitHub will generate a URL like: https://github.com/user/repo/assets/xxxxx/fairlend-demo.mp4
-  4. Replace the URL below with that URL, then delete these comments and push.
-  The video will then play inline with a native player, no download needed.
--->
-
 <div align="center">
 
-[![Watch Demo](./media/dashboard-overview.png)](https://github.com/aayusharmaaa/Fairlend/raw/main/media/fairlend-demo.mp4)
+[![Watch Demo](./media/dashboard-overview.png)](https://github.com/aayusharmaaa/Fairlend/releases/download/v1.0-demo/fairlend.mp4)
 
-*▶ Click the image above to watch the product demo*
+**[▶ Click to Watch Full Demo Video](https://github.com/aayusharmaaa/Fairlend/releases/download/v1.0-demo/fairlend.mp4)**
 
 </div>
 
