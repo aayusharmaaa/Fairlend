@@ -24,7 +24,7 @@
 
 <div align="center">
 
-[![Watch Demo](./media/dashboard-overview.png)](https://drive.google.com/file/d/1WEtUOMbM7xz_MNx5zw3YgwkWfablmjH-/preview)
+[![Watch Demo](./media/dashboard-screenshot.png)](https://drive.google.com/file/d/1WEtUOMbM7xz_MNx5zw3YgwkWfablmjH-/preview)
 
 **[▶ Click to Watch Full Demo Video](https://drive.google.com/file/d/1WEtUOMbM7xz_MNx5zw3YgwkWfablmjH-/preview)**
 
@@ -94,7 +94,7 @@ The platform runs a **Continuous Proactive Validation** loop across five stages:
 
 <div align="center">
 
-![Dashboard Overview](./media/dashboard-overview.png)
+![Dashboard Overview](./media/dashboard-screenshot.png)
 
 </div>
 
