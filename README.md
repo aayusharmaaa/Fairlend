@@ -14,14 +14,10 @@ This project was developed as part of a GenAI capstone initiative in collaborati
 
 ## Brand Logos
 
-Add your logos to `media/` and keep this section at the top for better visual branding:
-
-```md
 <p align="left">
-  <img src="./media/fairlend-logo.png" alt="FairLend Logo" height="56" />
-  <img src="./media/deloitte-logo.png" alt="Deloitte Logo" height="56" />
+  <img src="./media/fairlend-logo.png" alt="FairLend Logo" height="64" />
+  <img src="./media/deloitte-logo.png" alt="Deloitte Logo" height="64" />
 </p>
-```
 
 ---
 
@@ -77,18 +73,18 @@ See the complete architecture diagram and component responsibilities in:
 
 ### Demo Video
 
-Add your product walkthrough video here:
-
-- YouTube/Vimeo link: `https://your-demo-link`
-
-Or embed directly:
+Embedded product walkthrough:
 
 ```html
 <video width="960" controls>
-  <source src="./media/fairlend-demo.mp4" type="video/mp4" />
+  <source src="./media/fairlend-demo.MOV" type="video/quicktime" />
   Your browser does not support the video tag.
 </video>
 ```
+
+Direct file link:
+
+- [Watch Demo Video](./media/fairlend-demo.MOV)
 
 ### Screenshots
 
