@@ -22,9 +22,11 @@
 
 ## Product Demo
 
-> Click the link below to download and watch the full product walkthrough.
+<div align="center">
 
-**[▶ Watch Demo Video](./media/fairlend-demo.MOV)**
+https://github.com/aayusharmaaa/Fairlend/raw/main/media/fairlend-demo.mp4
+
+</div>
 
 ---
 
