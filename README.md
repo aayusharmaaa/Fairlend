@@ -93,7 +93,9 @@ The goal is to make AI model validation **transparent, auditable, and actionable
 
 ## System Architecture
 
-See the complete architecture diagram and component responsibilities in:
+![System Architecture](./media/system-architecture-diagram.png)
+
+Detailed component responsibilities are documented in:
 
 - [SYSTEM_ARCHITECTURE.md](./SYSTEM_ARCHITECTURE.md)
 
