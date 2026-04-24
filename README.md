@@ -100,6 +100,30 @@ The real-time dashboard gives analysts a complete picture: **Approval Parity**, 
 
 ---
 
+### Synthetic Profile Generation — Coverage Across India
+
+<div align="center">
+
+![Profile Diversity](./media/profile-diversity.png)
+
+</div>
+
+Each test run generates synthetic applicant profiles spanning the full demographic landscape of Indian education loan applicants — geographic spread across urban Tier-1 and rural Tier-2/3 cities, income bands from ₹8L to ₹50L, CIBIL scores 300–900, diverse educational backgrounds, and edge cases such as first-time borrowers, self-employed parents, and widow co-applicants. This ensures the fairness audit covers the real-world diversity of applicants the model will encounter.
+
+---
+
+### Mitigation in Action — Before vs. After
+
+<div align="center">
+
+![Mitigation Results](./media/mitigation-results.png)
+
+</div>
+
+After detecting a **12% Urban vs. Rural approval gap** (Parity Ratio 0.85), the agentic mitigation loop runs iterative scoring adjustments guided by human expert feedback. After one mitigation cycle (8 iterations), the approval gap closes to **2%** — pushing the Parity Ratio from **0.85 to 0.97**, well within the ≥0.95 fairness target.
+
+---
+
 ## System Architecture
 
 <div align="center">
