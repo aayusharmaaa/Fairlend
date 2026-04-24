@@ -8,35 +8,46 @@
 
 ---
 
-## Product Demo
-
-### Demo Video
-
-Embedded product walkthrough:
-
-```html
-<video width="960" controls>
-  <source src="./media/fairlend-demo.MOV" type="video/quicktime" />
-  Your browser does not support the video tag.
-</video>
-```
-
-Direct file link:
-
-- [Watch Demo Video](./media/fairlend-demo.MOV)
-
----
-
 ## Collaboration
 
 This project was developed as part of a GenAI capstone initiative in collaboration with **Deloitte**.
-
-## Brand Logos
 
 <p align="left">
   <img src="./media/fairlend-logo.png" alt="FairLend Logo" height="64" />
   <img src="./media/deloitte-logo.png" alt="Deloitte Logo" height="64" />
 </p>
+
+---
+
+## Product Demo
+
+Embedded product walkthrough:
+
+<video width="100%" controls>
+  <source src="./media/fairlend-demo.MOV" type="video/quicktime" />
+  Your browser does not support the video tag.
+</video>
+
+Direct link (recommended fallback):
+
+- [Watch Demo Video](./media/fairlend-demo.MOV)
+
+---
+
+## Product Snapshots
+
+### Dashboard Overview
+
+![Dashboard Overview](./media/dashboard-overview.png)
+
+### Workflow Summary
+
+![Workflow Cycle](./media/workflow-cycle.png)
+
+### Additional Showcase Images
+
+![README Preview](./media/readme-preview.png)
+![Logos Preview](./media/logos-preview.png)
 
 ---
 
@@ -90,13 +101,10 @@ See the complete architecture diagram and component responsibilities in:
 
 ### Screenshots
 
-Add product screenshots in `media/` and reference them:
-
-```md
-![Login Screen](./media/login.png)
-![Bias Dashboard](./media/dashboard.png)
-![Mitigation Comparison](./media/mitigation.png)
-```
+- Dashboard: `media/dashboard-overview.png`
+- Workflow: `media/workflow-cycle.png`
+- README preview: `media/readme-preview.png`
+- Logos preview: `media/logos-preview.png`
 
 ---
 
