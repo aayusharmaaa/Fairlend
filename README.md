@@ -8,6 +8,25 @@
 
 ---
 
+## Product Demo
+
+### Demo Video
+
+Embedded product walkthrough:
+
+```html
+<video width="960" controls>
+  <source src="./media/fairlend-demo.MOV" type="video/quicktime" />
+  Your browser does not support the video tag.
+</video>
+```
+
+Direct file link:
+
+- [Watch Demo Video](./media/fairlend-demo.MOV)
+
+---
+
 ## Collaboration
 
 This project was developed as part of a GenAI capstone initiative in collaboration with **Deloitte**.
@@ -68,23 +87,6 @@ See the complete architecture diagram and component responsibilities in:
 - [SYSTEM_ARCHITECTURE.md](./SYSTEM_ARCHITECTURE.md)
 
 ---
-
-## Product Demo
-
-### Demo Video
-
-Embedded product walkthrough:
-
-```html
-<video width="960" controls>
-  <source src="./media/fairlend-demo.MOV" type="video/quicktime" />
-  Your browser does not support the video tag.
-</video>
-```
-
-Direct file link:
-
-- [Watch Demo Video](./media/fairlend-demo.MOV)
 
 ### Screenshots
 
