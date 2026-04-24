@@ -190,6 +190,88 @@ Full component breakdown → [SYSTEM_ARCHITECTURE.md](./SYSTEM_ARCHITECTURE.md)
 
 ---
 
+## Technical Deep Dive
+
+### API Design
+
+The backend exposes a versioned REST API (`/api/v1`) organized into six functional domains, with a WebSocket channel for real-time metric streaming to the frontend dashboard.
+
+| Endpoint Group | Purpose |
+|---|---|
+| `/auth` | JWT-based employee login, token validation, session management |
+| `/profiles` | Synthetic profile generation, upload (CSV/ZIP), and listing |
+| `/scoring` | Trigger fair or biased scoring runs against loaded profiles |
+| `/metrics` | Retrieve computed fairness metrics, parity ratios, and disparity indicators |
+| `/feedback` | Submit, list, and manage human expert annotations and severity ratings |
+| `/mitigation` | Launch mitigation cycles, retrieve before/after comparison reports |
+| `ws://…/ws/metrics` | WebSocket stream for live fairness score and KPI updates |
+
+---
+
+### End-to-End Data Flow
+
+```
+Browser (Next.js 14)
+  │
+  ├─ REST calls ──► FastAPI Router
+  │                    │
+  │         ┌──────────┼──────────┐
+  │         ▼          ▼          ▼
+  │   Profile Svc  Scoring Svc  Metrics Svc
+  │         │          │          │
+  │         └────► SQLite / PostgreSQL (ORM via SQLAlchemy)
+  │                    │
+  │         ┌──────────┘
+  │         ▼
+  │   Celery Worker (async batch scoring)
+  │         │
+  │         ▼
+  │   GenAI Service ──► Google Gemini API
+  │         │           (profile generation, mitigation prompts)
+  │         ▼
+  │   Redis (task queue + response cache)
+  │
+  └─ WebSocket ──► Real-time KPI push to dashboard
+```
+
+---
+
+### Key Engineering Decisions
+
+| Decision | Rationale |
+|---|---|
+| **FastAPI over Django/Flask** | Native async support; automatic OpenAPI docs; Pydantic validation built-in — essential for a data-heavy validation API |
+| **SQLite for demo, PostgreSQL for prod** | Zero-dependency local setup for showcasing; same SQLAlchemy ORM layer switches to PostgreSQL via a single env variable |
+| **Celery + Redis for async scoring** | Scoring 3,100+ profiles blocks for seconds; offloading to Celery workers keeps the API responsive and allows horizontal scale-out |
+| **WebSocket for live metrics** | Polling would miss intermediate scoring updates; WebSocket lets the dashboard show live fairness score changes during a mitigation run |
+| **LangChain for GenAI orchestration** | Abstracts provider switching (OpenAI ↔ Gemini); structured output parsing and retry logic built-in; prompt chain management for multi-step mitigation |
+| **Next.js App Router + TanStack Query** | Server components for fast initial load; TanStack Query handles cache invalidation for metric refreshes without manual state management |
+| **Synthetic-only data** | Eliminates PII risk entirely; allows open sharing of test results and audit artifacts without data governance constraints |
+
+---
+
+### Scalability
+
+- **Horizontal API scaling** — FastAPI is stateless; multiple instances sit behind a load balancer sharing the same PostgreSQL and Redis layer
+- **Worker scale-out** — Celery workers are independently scalable; adding workers reduces large-batch scoring time linearly
+- **Caching** — Redis caches computed fairness metrics; repeated dashboard loads hit cache, not the database
+- **Containerised** — Docker Compose for local; Kubernetes-ready for production with minimal manifest changes
+
+---
+
+### Security
+
+| Control | Implementation |
+|---|---|
+| Authentication | JWT (HS256) with expiring tokens; `python-jose` for signing and verification |
+| Password storage | bcrypt hashing; no plaintext credentials stored anywhere |
+| Input validation | All request bodies validated via Pydantic schemas before reaching service layer — prevents injection and malformed payloads |
+| CORS | Strict allowlist of frontend origins; wildcard disabled in production config |
+| Secrets management | All API keys and DB credentials via environment variables; never hardcoded or committed |
+| PII protection | Entirely synthetic applicant data; no real customer records processed or stored |
+
+---
+
 ## Repository Scope
 
 This is a **public product showcase**. It intentionally includes product description, architecture, demo media, and metrics — and intentionally excludes all source code, proprietary algorithms, scoring logic, internal prompts, and deployment configurations.
