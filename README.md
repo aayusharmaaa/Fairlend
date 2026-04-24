@@ -28,8 +28,6 @@
 
 **[▶ Click to Watch Full Demo Video](https://drive.google.com/file/d/1WEtUOMbM7xz_MNx5zw3YgwkWfablmjH-/preview)**
 
-*Opens in Google Drive — plays directly in your browser, no download needed.*
-
 </div>
 
 ---
