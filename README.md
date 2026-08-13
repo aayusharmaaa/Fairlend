@@ -26,7 +26,7 @@
 
 <div align="center">
 
-![Watch Demo](media/Screenshot 2026-01-21 132915.png)
+![Watch Demo](media/Screenshot.png)
 
 
 **[▶ Click to Watch Full Demo Video](https://drive.google.com/file/d/1WEtUOMbM7xz_MNx5zw3YgwkWfablmjH-/preview)**
