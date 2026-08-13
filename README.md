@@ -10,6 +10,8 @@
 
 ### GenAI-powered, human-in-the-loop platform for detecting, quantifying, and mitigating bias in education loan AI systems
 
+### [→ Open the live site](https://tallystick-one.vercel.app/)
+
 <br/>
 
 [![Built With](https://img.shields.io/badge/Built%20With-FastAPI%20%7C%20Next.js%2014%20%7C%20Google%20Gemini-1d6f42?style=for-the-badge&logo=python&logoColor=white)](https://github.com/aayusharmaaa/Fairlend)
