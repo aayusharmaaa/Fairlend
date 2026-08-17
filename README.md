@@ -10,7 +10,11 @@
 
 ### GenAI-powered, human-in-the-loop platform for detecting, quantifying, and mitigating bias in education loan AI systems
 
-### [→ Open the live site](https://fairlend-landing-page.vercel.app/#top)
+<br/>
+
+### [![Explore the live site](https://img.shields.io/badge/%E2%86%92_Explore_the_live_site-fairlend--landing--page.vercel.app-0F824A?style=for-the-badge&logoColor=white)](https://fairlend-landing-page.vercel.app/#top)
+
+**[▶ Watch the full product demo](https://drive.google.com/file/d/1WEtUOMbM7xz_MNx5zw3YgwkWfablmjH-/preview)** &nbsp;·&nbsp; **[Architecture deep dive](./SYSTEM_ARCHITECTURE.md)**
 
 <br/>
 
@@ -22,16 +26,31 @@
 
 ---
 
-## Product Demo
-
 <div align="center">
 
-![Watch Demo](media/Screenshot.png)
+<a href="https://fairlend-landing-page.vercel.app/#top">
+  <img src="./media/Screenshot.png" alt="FairLend — open the live site" width="900" />
+</a>
 
-
-**[▶ Click to Watch Full Demo Video](https://drive.google.com/file/d/1WEtUOMbM7xz_MNx5zw3YgwkWfablmjH-/preview)**
+<sub><b><a href="https://fairlend-landing-page.vercel.app/#top">fairlend-landing-page.vercel.app</a></b> — guided walkthrough of the workbench, from bias detection through to mitigation</sub>
 
 </div>
+
+---
+
+## Contents
+
+| | |
+|---|---|
+| [Overview](#overview) | What the platform is, and the problem it solves |
+| [Key Metrics](#key-metrics) | Results at a glance |
+| [How It Works](#how-it-works) | The five-stage validation loop |
+| [Platform Snapshots](#platform-snapshots) | Dashboard, profile generation, mitigation |
+| [System Architecture](#system-architecture) | Layers, services, and data flow |
+| [Business Impact](#business-impact) | Before and after, per challenge |
+| [Fairness Targets](#fairness-targets) | The thresholds every run is measured against |
+| [Technical Deep Dive](#technical-deep-dive) | API design, engineering decisions, scale, security |
+| [Enterprise Readiness](#enterprise-readiness) | Integration into regulated environments |
 
 ---
 
@@ -57,11 +76,10 @@ Trained and validated on **enterprise-grade financial data** reflecting real-wor
 |---|---|
 | Synthetic profiles evaluated per run | **3,100+** |
 | Bias dimensions covered | **5** |
-| Fairness testing cycle time | **4–6 weeks -> 2–3 days per model run** |
-| Approval gap reduction between borrower groups | **~12–13% -> ~2–3%** |
-| Approval parity target | **≥ 0.95** |
-| Interest rate disparity target | **< 0.5%** |
-| Edge case coverage target | **≥ 95%** |
+| Fairness testing cycle time | **4–6 weeks → 2–3 days** per model run |
+| Approval gap between borrower groups | **~12–13% → ~2–3%** |
+| Parity ratio after mitigation | **0.85 → 0.97** (target ≥ 0.95) |
+| Composite fairness score | **68.4 → 91.2** (target ≥ 85) |
 
 </div>
 
@@ -86,6 +104,8 @@ The platform runs a **Continuous Proactive Validation** loop across five stages:
 **4. Validate** — Human domain experts (compliance officers, risk analysts) review flagged findings through a structured Human-in-the-Loop interface. They annotate each finding with severity ratings, root-cause analysis, and mitigation guidance.
 
 **5. Mitigate** — An agentic mitigation loop reads expert feedback, refines scoring logic and prompt weights, re-evaluates all profiles, and generates a before/after comparison report — iterating until fairness targets are met.
+
+> Walk through all five stages interactively on the **[live site →](https://fairlend-landing-page.vercel.app/#how-it-works)**
 
 ---
 
@@ -147,7 +167,7 @@ The platform is built on a **cloud-native, modular architecture** designed for e
 | Async | Celery | Background processing for large profile batches |
 | Infra | Docker, Docker Compose | Container-based deployment |
 
-Full component breakdown → [SYSTEM_ARCHITECTURE.md](./SYSTEM_ARCHITECTURE.md)
+Full component breakdown → **[SYSTEM_ARCHITECTURE.md](./SYSTEM_ARCHITECTURE.md)**
 
 ---
 
@@ -313,5 +333,13 @@ This is a **public product showcase**. It intentionally includes product descrip
 
 For collaboration inquiries, live demos, or case study discussions:
 
+- **Live site:** [fairlend-landing-page.vercel.app](https://fairlend-landing-page.vercel.app/#top)
 - **LinkedIn:** [linkedin.com/in/aayusharmaaa](https://linkedin.com/in/aayusharmaaa)
 - **GitHub:** [github.com/aayusharmaaa](https://github.com/aayusharmaaa)
+
+<div align="center">
+<br/>
+
+### [![Explore the live site](https://img.shields.io/badge/%E2%86%92_Explore_the_live_site-fairlend--landing--page.vercel.app-0F824A?style=for-the-badge&logoColor=white)](https://fairlend-landing-page.vercel.app/#top)
+
+</div>
